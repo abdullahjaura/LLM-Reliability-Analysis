@@ -65,6 +65,10 @@ For each question:
 
 The system performed significantly better on deterministic problems (math) than on factual recall tasks. This suggests that structured or rule-based reasoning is more reliable than knowledge retrieval.
 
+### Evaluation Limitations of Exact Matching
+
+The evaluation relies on string-based matching, which fails to capture semantic correctness. For example, answers that are conceptually correct but phrased differently may be classified as partial or incorrect. This highlights the need for more robust evaluation methods, such as embedding-based similarity or model-based grading.
+
 ### Partial Correctness is Common
 
 Several responses contained partially correct information (e.g., correct concept but wrong detail). This highlights a limitation of strict exact-match evaluation.
