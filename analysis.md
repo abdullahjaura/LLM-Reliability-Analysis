@@ -97,11 +97,13 @@ Performance varied meaningfully across categories, indicating that evaluation sh
 * Incorporate semantic similarity scoring (embedding-based evaluation)
 * Improve error classification with more granular categories
 * Compare multiple model baselines
+* Introduce multiple baseline systems to compare performance and analyze variance across model behaviors
 
 ---
 
-
 ## 7. Conclusion
 
-This project demonstrates that evaluating model reliability requires more than measuring accuracy. Structured error classification and category-level analysis provide deeper insight into model behavior and failure modes.
+This project demonstrates that evaluating QA system reliability requires both quantitative metrics and qualitative analysis of failure modes. While overall accuracy provides a high-level signal, error classification and category-level breakdowns reveal deeper patterns in model behavior.
+
+The results suggest that even simple systems exhibit uneven performance across task types, reinforcing the importance of structured evaluation frameworks when analyzing more advanced models.
 
