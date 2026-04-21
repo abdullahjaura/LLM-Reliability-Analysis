@@ -1,48 +1,44 @@
-import os
 import pandas as pd
-from openai import OpenAI
+import random
+import os
 
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+# Fake model (no API needed)
+def fake_model_answer(question):
+    possible_answers = [
+        "Paris",
+        "William Shakespeare",
+        "Jupiter",
+        "100",
+        "Incorrect Answer"
+    ]
+    return random.choice(possible_answers)
 
+# Load dataset
 df = pd.read_csv("data/questions.csv")
+
 results = []
 
 for _, row in df.iterrows():
     question = row["question"]
     true_answer = str(row["answer"]).strip()
 
-    try:
-        response = client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=[
-                {"role": "system", "content": "Answer the question briefly and directly."},
-                {"role": "user", "content": question},
-            ],
-            temperature=0
-        )
+    model_answer = fake_model_answer(question)
 
-        model_answer = response.choices[0].message.content.strip()
-        correct = true_answer.lower() in model_answer.lower()
+    correct = true_answer.lower() in model_answer.lower()
 
-        results.append({
-            "question": question,
-            "true_answer": true_answer,
-            "model_answer": model_answer,
-            "correct": correct
-        })
+    results.append({
+        "question": question,
+        "true_answer": true_answer,
+        "model_answer": model_answer,
+        "correct": correct
+    })
 
-    except Exception as e:
-        results.append({
-            "question": question,
-            "true_answer": true_answer,
-            "model_answer": f"ERROR: {e}",
-            "correct": False
-        })
-
-results_df = pd.DataFrame(results)
+# Save results
 os.makedirs("results", exist_ok=True)
+results_df = pd.DataFrame(results)
 results_df.to_csv("results/results.csv", index=False)
 
+# Print accuracy
 accuracy = results_df["correct"].mean()
 print(f"Accuracy: {accuracy * 100:.2f}%")
-print(results_df[["question", "model_answer", "correct"]])
+print(results_df)
