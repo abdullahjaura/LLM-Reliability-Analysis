@@ -1,11 +1,31 @@
-question,answer
-What is the capital of France?,Paris
-Who wrote Hamlet?,William Shakespeare
-What is the largest planet?,Jupiter
-What is the boiling point of water in Celsius?,100
-What gas do plants absorb from the atmosphere?,Carbon dioxide
-What is 15 * 3?,45
-What year did World War II end?,1945
-What is the chemical symbol for gold?,Au
-Who painted the Mona Lisa?,Leonardo da Vinci
-What is the capital of Japan?,Tokyo
+question,answer,category
+What is the capital of France?,Paris,geography
+What is the capital of Japan?,Tokyo,geography
+What is the capital of Italy?,Rome,geography
+What is the capital of Canada?,Ottawa,geography
+What is the capital of Brazil?,Brasilia,geography
+What is the largest planet?,Jupiter,science
+What gas do plants absorb from the atmosphere?,Carbon dioxide,science
+What is the chemical symbol for gold?,Au,science
+What is the boiling point of water in Celsius?,100,science
+What force keeps planets in orbit around the sun?,Gravity,science
+What is the hardest natural substance?,Diamond,science
+How many bones are in the adult human body?,206,science
+What organ pumps blood through the body?,Heart,science
+What is H2O commonly called?,Water,science
+What part of the plant conducts photosynthesis?,Leaf,science
+Who wrote Hamlet?,William Shakespeare,history
+What year did World War II end?,1945,history
+Who painted the Mona Lisa?,Leonardo da Vinci,history
+Who was the first President of the United States?,George Washington,history
+In which country were the pyramids of Giza built?,Egypt,history
+What wall fell in 1989 in Germany?,Berlin Wall,history
+Who discovered penicillin?,Alexander Fleming,history
+What ship famously sank in 1912?,Titanic,history
+Who was known as the Maid of Orleans?,Joan of Arc,history
+Which ancient civilization built Machu Picchu?,Inca,history
+What is 15 * 3?,45,math
+What is 12 squared?,144,math
+What is 100 divided by 4?,25,math
+What is 9 + 17?,26,math
+What is the square root of 81?,9,math
