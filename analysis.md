@@ -23,7 +23,7 @@ The goal of this project is to design a lightweight evaluation pipeline for asse
 
 For each question:
 
-* Generate a model response (simulated baseline system)
+* Generate responses using a rule-based baseline QA system to simulate varying levels of correctness
 * Compare response to ground truth answer
 * Classify result into:
 
